@@ -180,6 +180,11 @@ const Awusahrul_HalamanDukungan: NextPage = () => {
       <Head>
         <title>dariKami! ~ buat Awu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/jpeg" href="/gambar.jpg" />
+        <meta content='#e4910a' name='theme-color'/>
+        <meta content='#e4910a' name='msapplication-navbutton-color'/>
+        <meta content='yes' name='apple-mobile-web-app-capable'/>
+        <meta content='#e4910a' name='apple-mobile-web-app-status-bar-style'/>
       </Head>
       <div className="awusahrul_wadah">
         <div className="awusahrul_konten_utama">
@@ -198,7 +203,7 @@ const Awusahrul_HalamanDukungan: NextPage = () => {
                               <span>▼</span>
                           </button>
                           <div className={`awusahrul_menu_turun ${awusahrul_dropdownTerbuka ? 'awusahrul_tampil' : ''}`}>
-                              {[1000, 5000, 10000, 25000, 50000].map(awusahrul_jumlah => (
+                              {[5000, 10000, 25000, 50000].map(awusahrul_jumlah => (
                                   <div key={awusahrul_jumlah} className="awusahrul_item_turun" onClick={() => awusahrul_tanganiPerubahanJumlah(awusahrul_jumlah, awusahrul_formatMataUang(awusahrul_jumlah))}>
                                       {awusahrul_formatMataUang(awusahrul_jumlah)}
                                   </div>
