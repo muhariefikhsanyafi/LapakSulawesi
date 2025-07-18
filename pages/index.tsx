@@ -181,10 +181,10 @@ const Awusahrul_HalamanDukungan: NextPage = () => {
         <title>dariKami! ~ buat Awu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/jpeg" href="/gambar.jpg" />
-        <meta content='#e4910a' name='theme-color'/>
-        <meta content='#e4910a' name='msapplication-navbutton-color'/>
+        <meta content='#000000' name='theme-color'/>
+        <meta content='#000000' name='msapplication-navbutton-color'/>
         <meta content='yes' name='apple-mobile-web-app-capable'/>
-        <meta content='#e4910a' name='apple-mobile-web-app-status-bar-style'/>
+        <meta content='#000000' name='apple-mobile-web-app-status-bar-style'/>
       </Head>
       <div className="awusahrul_wadah">
         <div className="awusahrul_konten_utama">
