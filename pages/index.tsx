@@ -226,7 +226,7 @@ const Awusahrul_HalamanDukungan: NextPage = () => {
               </form>
           </div>
         </div>
-        <footer className="awusahrul_kaki_utama">dariKami! ~ buat kamu karya <a href="">@awusahrul</a></footer>
+        <footer className="awusahrul_kaki_utama">dariKami! ~ buat Jajan karya <a href="">@awusahrul</a></footer>
       </div>
       {awusahrul_modalQrisTerbuka && awusahrul_dukunganAktif && (
         <div className={`awusahrul_modal ${awusahrul_modalQrisTerbuka ? 'awusahrul_aktif' : ''}`} onClick={() => atur_awusahrul_modalQrisTerbuka(false)}>
