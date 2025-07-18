@@ -1,4 +1,4 @@
-![Banner](https://play.awu.my.id/AwuPlay_20250625_212530_0000.svg)
+![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 # dariKami! ~ buat Jajan
 ```💬 “Karena kadang, apresiasi gak perlu rumit. Cukup... dari kami, buat jajan.”
 Halaman Dukungan Kreator 100% Gratis via QRIS```
