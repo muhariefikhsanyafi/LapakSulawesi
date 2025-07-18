@@ -1,7 +1,8 @@
 ![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 # dariKami! ~ buat Jajan
 ```💬 “Karena kadang, apresiasi gak perlu rumit. Cukup... dari kami, buat jajan.”
-Halaman Dukungan Kreator 100% Gratis via QRIS```
+Halaman Dukungan Kreator 100% Gratis via QRIS
+```
 
 ![Lisensi MIT](https://img.shields.io/badge/Lisensi-MIT-blue.svg) ![Next.js](https://img.shields.io/badge/Next.js-14.x-black?logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
 
