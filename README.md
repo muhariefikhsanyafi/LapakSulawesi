@@ -1,12 +1,11 @@
-## 📢 Dapatkan Update Terbaru (Apabila ada tambahan Fitur)
-
-[![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
 ![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 # dariKami! ~ buat Jajan
 ```💬 “Karena kadang, apresiasi gak perlu rumit. Cukup... dari kami, buat jajan.”
 Halaman Dukungan Kreator 100% Gratis via QRIS
 ```
+## 📢 Dapatkan Update Terbaru (Apabila ada tambahan Fitur)
 
+[![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
 ![Lisensi MIT](https://img.shields.io/badge/Lisensi-MIT-blue.svg) ![Next.js](https://img.shields.io/badge/Next.js-14.x-black?logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
 
 Selamat datang di **dariKami!** Sebuah proyek *open-source* yang menyediakan kode halaman dukungan untuk para kreator, streamer, developer, atau siapa pun yang ingin menerima dukungan finansial dari audiens mereka.
