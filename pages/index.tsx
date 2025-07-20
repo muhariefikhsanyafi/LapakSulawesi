@@ -87,7 +87,7 @@ const Awusahrul_HalamanDukungan: NextPage = () => {
     }
     atur_awusahrul_sedangMemuat(true);
     try {
-      const awusahrul_jawabanApi = await fetch('/api/awusahrul_api', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: awusahrul_totalBayar }) });
+      const awusahrul_jawabanApi = await fetch('/api/qrisd', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: awusahrul_totalBayar }) });
       if (!awusahrul_jawabanApi.ok) throw new Error('Gagal membuat kode QRIS.');
       const awusahrul_data = await awusahrul_jawabanApi.json();
       const awusahrul_dukunganBaru: awusahrul_DukunganAktif = { awusahrul_jumlah: awusahrul_jumlahDukungan, awusahrul_biaya: awusahrul_biayaLayanan, awusahrul_total: awusahrul_totalBayar, awusahrul_idInvoice: `INV-${Date.now()}`, awusahrul_urlDataKodeQr: awusahrul_data.awusahrul_urlDataKodeQr };
