@@ -1,3 +1,6 @@
+## 📢 Dapatkan Update Terbaru (Apabila ada tambahan Fitur)
+
+[![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
 ![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 # dariKami! ~ buat Jajan
 ```💬 “Karena kadang, apresiasi gak perlu rumit. Cukup... dari kami, buat jajan.”
