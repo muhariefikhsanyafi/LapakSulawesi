@@ -97,11 +97,10 @@ Pastikan Anda sudah menginstal:
 
 Proyek ini memiliki potensi besar dan berikut adalah beberapa fitur yang direncanakan untuk pengembangan di masa depan:
 
--   [ ] Implementasi penuh QRIS Dinamis.
+-   [✓] Implementasi penuh QRIS Dinamis.
 -   [ ] Notifikasi dukungan secara real-time (misalnya via WebSockets).
 -   [ ] Halaman dashboard sederhana untuk kreator.
 -   [ ] Opsi kustomisasi tema dan tampilan.
--   [ ] Integrasi dengan platform streaming (OBS, Streamlabs).
 
 Punya ide lain? Jangan ragu untuk membuka *issue* atau *pull request*!
 
