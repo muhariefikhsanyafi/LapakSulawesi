@@ -1,10 +1,8 @@
 ![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 ## 📢 Dapatkan Update Terbaru (Apabila ada tambahan Fitur)
-# Daftar Versi #
--   [ ] 1.0.0 (Versi Awal) 18 Juli 2025
--   [x] 1.0.1 (Versi saat ini) terakhir diperbarui 21 Juli 2025
+
 [![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
-# dariKami! ~ buat Jajan V1.0.1 (21 Juli 2025)
+# dariKami! ~ buat Jajan
 ```💬 “Karena kadang, apresiasi gak perlu rumit. Cukup... dari kami, buat jajan.”
 Halaman Dukungan Kreator 100% Gratis via QRIS
 ```
@@ -17,6 +15,9 @@ Tujuan utama dari proyek ini adalah menyediakan solusi yang **100% gratis tanpa 
 Proyek ini masih dalam tahap pengembangan aktif. Fitur utama yang sedang dikembangkan adalah kemampuan untuk memecah QRIS statis menjadi dinamis, memungkinkan setiap transaksi memiliki kode QR unik. Kami percaya pada kekuatan komunitas, dan kontribusi Anda sangat kami harapkan untuk pengembangan di masa depan!
 
 ---
+# Daftar Versi #
+-   [ ] 1.0.0 (Versi Awal) 18 Juli 2025
+-   [x] 1.0.1 (Versi saat ini) terakhir diperbarui 21 Juli 2025
 
 ## ✨ Fitur Utama
 
