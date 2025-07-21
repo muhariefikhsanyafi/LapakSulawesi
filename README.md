@@ -1,8 +1,10 @@
 ![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 ## 📢 Dapatkan Update Terbaru (Apabila ada tambahan Fitur)
-
+# Daftar Versi #
+-   [ ] 1.0.0 (Versi Awal) 18 Juli 2025
+-   [x] 1.0.1 (Versi saat ini) terakhir diperbarui 21 Juli 2025
 [![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
-# dariKami! ~ buat Jajan
+# dariKami! ~ buat Jajan V1.0.1 (21 Juli 2025)
 ```💬 “Karena kadang, apresiasi gak perlu rumit. Cukup... dari kami, buat jajan.”
 Halaman Dukungan Kreator 100% Gratis via QRIS
 ```
@@ -97,7 +99,7 @@ Pastikan Anda sudah menginstal:
 
 Proyek ini memiliki potensi besar dan berikut adalah beberapa fitur yang direncanakan untuk pengembangan di masa depan:
 
--   [✓] Implementasi penuh QRIS Dinamis.
+-   [x] Implementasi penuh QRIS Dinamis.
 -   [ ] Notifikasi dukungan secara real-time (misalnya via WebSockets).
 -   [ ] Halaman dashboard sederhana untuk kreator.
 -   [ ] Opsi kustomisasi tema dan tampilan.
