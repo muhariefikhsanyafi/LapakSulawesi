@@ -18,6 +18,7 @@ Proyek ini masih dalam tahap pengembangan aktif. Fitur utama yang sedang dikemba
 # Daftar Versi #
 -   [ ] 1.0.0 (Versi Awal) 18 Juli 2025
 -   [x] 1.0.1 (Versi saat ini) terakhir diperbarui 21 Juli 2025
+-   [ ] 2.0.0 (SEGERA HADIR)
 
 ## ✨ Fitur Utama
 
