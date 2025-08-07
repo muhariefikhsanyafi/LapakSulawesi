@@ -139,7 +139,7 @@ export default async function penangan(permintaan: NextApiRequest, jawaban: Next
         const hasilUpdate = await perbaruiKontenGitHub(semuaDataDiperbarui, shaFile, pesanKomit);
 
         if (!hasilUpdate.success) return jawaban.status(500).json({ message: 'Gagal menyimpan data ke GitHub.', error: hasilUpdate.error });
-        return jawaban.status(200).json({ message: `Data untuk '${kunciEntri}' berhasil diproses!`, url_pambayaran: dataDiproses.url_pambayaran });
+        return jawaban.status(200).json({ message: `Terima kasih! Transaksi '${kunciEntri}' sedang diproses!`, url_pambayaran: dataDiproses.url_pambayaran });
       }
     } catch (error: any) {
       return jawaban.status(500).json({ message: 'Kesalahan server (POST).', error: error.message });
