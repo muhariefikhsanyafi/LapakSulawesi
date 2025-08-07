@@ -140,14 +140,14 @@ const HalamanDukungan: NextPage = () => {
     if (!dukunganAktif || !timestampBukaModal) return;
 
     const waktuBerlalu = Date.now() - timestampBukaModal;
-    if (waktuBerlalu < 15000) {
+    if (waktuBerlalu < 35000) {
         aturApakahModalPeringatanTerbuka(true);
         return;
     }
 
     aturSedangProsesTransaksi(true);
     try {
-        const respons = await fetch('/api/qris', {
+        const respons = await fetch('/api/v2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -184,7 +184,7 @@ const HalamanDukungan: NextPage = () => {
         setTimeout(() => {
           html2canvas(elemenInvoice, { scale: 2, useCORS: true }).then(canvas => {
             const link = document.createElement('a');
-            link.download = `Invoice-Sahrul-${dukunganAktif.idFaktur}.png`;
+            link.download = `Invoice-${dukunganAktif.idFaktur}.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
             if (tombol) { tombol.textContent = 'Download Invoice'; tombol.disabled = false; }
@@ -238,8 +238,8 @@ const HalamanDukungan: NextPage = () => {
         <div className="konten-utama">
           <div className="kepala">
               <button className="tombol-kepala" onClick={() => aturApakahModalRiwayatTerbuka(true)}>Riwayat</button>
-              <img src="https://via.placeholder.com/80x80/cccccc/666666?text=Profile" alt="Profile" className="gambar-profil"/>
-              <div className="nama-merek">Sahrul</div>
+              <img src="/gambar.jpg" alt="Profile" className="gambar-profil"/>
+              <div className="nama-merek">Antarmuka Website Utama</div>
           </div>
           <div className="wadah-formulir">
               <form onSubmit={tanganiKirimFormulir}>
@@ -313,7 +313,7 @@ const HalamanDukungan: NextPage = () => {
         <div className={`modal ${apakahModalPeringatanTerbuka ? 'aktif' : ''}`} onClick={() => aturApakahModalPeringatanTerbuka(false)}>
             <div className="konten-modal" onClick={e => e.stopPropagation()}>
                 <div className="kepala-modal"><h3 className="judul-modal">Peringatan</h3><button type="button" className="tutup-modal" onClick={() => aturApakahModalPeringatanTerbuka(false)}>&times;</button></div>
-                <p>Transaksi ini belum bisa diproses. Mohon tunggu minimal 15 detik setelah QR Code muncul sebelum memproses transaksi.</p>
+                <p>Transaksi ini belum bisa diproses. Silakan lakukan pembayaran terlebih dahulu.</p>
                 <div className="kaki-modal" style={{gridTemplateColumns: '1fr'}}>
                     <button type="button" className="tombol-modal" onClick={() => aturApakahModalPeringatanTerbuka(false)}>Mengerti</button>
                 </div>
