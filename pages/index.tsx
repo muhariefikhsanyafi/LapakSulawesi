@@ -230,7 +230,7 @@ const HalamanDukungan: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Halaman Dukungan - AWU</title>
+        <title>Halaman Dukungan - Awu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/jpeg" href="/gambar.jpg" />
       </Head>
@@ -239,7 +239,7 @@ const HalamanDukungan: NextPage = () => {
           <div className="kepala">
               <button className="tombol-kepala" onClick={() => aturApakahModalRiwayatTerbuka(true)}>Riwayat</button>
               <img src="/gambar.jpg" alt="Profile" className="gambar-profil"/>
-              <div className="nama-merek">AWU</div>
+              <div className="nama-merek">Awu</div>
           </div>
           <div className="wadah-formulir">
               <form onSubmit={tanganiKirimFormulir}>
