@@ -60,7 +60,7 @@ const HalamanDasbor: NextPage = () => {
     aturModalDetailTerbuka(true);
   };
 
-  const tanganiUbahStatus = async (statusBaru: 'Berhasil' | 'Sedang Proses' | 'Dibatalkan') => {
+  const tanganiUbahStatus = async (statusBaru: 'Berhasil' | 'Di Proses' | 'Dibatalkan') => {
     if (!transaksiTerpilih) return;
     
     const idTransaksi = transaksiTerpilih.id;
@@ -154,7 +154,7 @@ const HalamanDasbor: NextPage = () => {
                     <h4>Ubah Status Transaksi</h4>
                     <div className="button-group">
                         <button className="btn-berhasil" onClick={() => tanganiUbahStatus('Berhasil')}>Berhasil</button>
-                        <button className="btn-proses" onClick={() => tanganiUbahStatus('Sedang Proses')}>Sedang Proses</button>
+                        <button className="btn-proses" onClick={() => tanganiUbahStatus('Di Proses')}>Di Proses</button>
                         <button className="btn-batal" onClick={() => tanganiUbahStatus('Dibatalkan')}>Dibatalkan</button>
                     </div>
                 </div>
