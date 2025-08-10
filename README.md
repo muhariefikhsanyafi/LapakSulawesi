@@ -15,10 +15,6 @@ Selamat datang di **viaQris\!** 🎉
 
 **viaQris** adalah platform dukungan kreator yang membuat apresiasi jadi **mudah, cepat, dan fleksibel**. Siapa pun bisa mengirim dukungan instan ke kreator favoritnya melalui **QRIS**, yang kompatibel dengan **semua e-wallet dan bank**, tanpa ribet.
 
-Dengan viaQris, setiap dukungan terasa personal—seolah berkata:
-
-> *"Ini dari kami, untukmu. Teruslah berkarya\!"*
-
 -----
 
 ## ✨ Fitur Utama
