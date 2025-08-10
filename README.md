@@ -1,5 +1,5 @@
 
-![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
+![Banner](https://darikami.vercel.app/viaQris.jpg)
 
 # viaQris ~ @awusahrul
 
