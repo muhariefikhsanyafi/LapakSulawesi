@@ -1,7 +1,7 @@
 
 ![Banner](https://darikami.vercel.app/viaQris.jpg)
 
-# viaQris ~ @awusahrul
+# viaQris ~ Dinamis
 
 [![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
 [![Versi](https://img.shields.io/badge/Versi-2.0-blueviolet)](https://github.com/awusahrul/viaQris)
