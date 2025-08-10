@@ -141,6 +141,3 @@ Dirilis di bawah **MIT License**. Lihat file `LICENSE` untuk detail.
 -----
 
 © 2025 **viaQris** | Dibuat oleh [@awusahrul](https://github.com/awusahrul)
-
-```
-```
