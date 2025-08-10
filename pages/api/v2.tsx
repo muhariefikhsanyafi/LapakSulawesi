@@ -63,13 +63,27 @@ async function perbaruiKontenGitHub(
   pesanKomit: string
 ): Promise<{ success: boolean; error?: any; commitUrl?: string }> {
     const kontenBaruEncode = Buffer.from(JSON.stringify(dataUntukDiperbarui, null, 2)).toString('base64');
-    const payload = { message: pesanKomit, content: kontenBaruEncode, branch: BRANCH!, sha: shaFileSaatIni };
+    const payload: { message: string; content: string; branch: string; sha?: string } = {
+        message: pesanKomit,
+        content: kontenBaruEncode,
+        branch: BRANCH!,
+    };
+    if (shaFileSaatIni) {
+        payload.sha = shaFileSaatIni;
+    }
     try {
         const respons = await fetch(dapatkanUrlApiGitHub(), { method: 'PUT', headers: { ...headerUmum, 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-        if (!respons.ok) { const dataError = await respons.json(); return { success: false, error: dataError.message }; }
+        if (!respons.ok) { 
+            const dataError = await respons.json(); 
+            console.error("GitHub API Error:", dataError);
+            return { success: false, error: dataError.message }; 
+        }
         const hasil = await respons.json();
         return { success: true, commitUrl: hasil.commit.html_url };
-    } catch (error: any) { return { success: false, error: error.message }; }
+    } catch (error: any) { 
+        console.error("Fetch to GitHub Error:", error);
+        return { success: false, error: error.message }; 
+    }
 }
 
 export default async function penangan(permintaan: NextApiRequest, jawaban: NextApiResponse) {
@@ -139,7 +153,7 @@ export default async function penangan(permintaan: NextApiRequest, jawaban: Next
         const hasilUpdate = await perbaruiKontenGitHub(semuaDataDiperbarui, shaFile, pesanKomit);
 
         if (!hasilUpdate.success) return jawaban.status(500).json({ message: 'Gagal menyimpan data ke GitHub.', error: hasilUpdate.error });
-        return jawaban.status(200).json({ message: `Terima kasih! Transaksi '${kunciEntri}' sedang diproses!`, url_pambayaran: dataDiproses.url_pambayaran });
+        return jawaban.status(200).json({ message: `Data untuk '${kunciEntri}' berhasil diproses!`, url_pambayaran: dataDiproses.url_pambayaran });
       }
     } catch (error: any) {
       return jawaban.status(500).json({ message: 'Kesalahan server (POST).', error: error.message });
