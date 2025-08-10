@@ -1,41 +1,32 @@
+
 ![Banner](https://darikami.vercel.app/dariKami_thumbnail.svg)
 
-# dariKami V2! ~ Buat Jajan
+# viaQris ~ @awusahrul
 
 [![Ikuti Saluran WhatsApp](https://img.shields.io/badge/Ikuti%20di-WhatsApp-green?logo=whatsapp)](https://whatsapp.com/channel/0029Vb6WmoKGpLHOdbB4NS3I)
-[![Versi](https://img.shields.io/badge/Versi-2.0-blueviolet)](https://github.com/awusahrul/dariKami)
+[![Versi](https://img.shields.io/badge/Versi-2.0-blueviolet)](https://github.com/awusahrul/viaQris)
 ![Lisensi MIT](https://img.shields.io/badge/Lisensi-MIT-blue.svg)
 
-```💬 "Karena apresiasi itu gak perlu ribet. Cukup... dari kami, buat jajan."
+```💬 "Memberi dukungan kini semudah scan QR."
 Halaman Dukungan Kreator 100% Gratis yang Dikelola Sepenuhnya via GitHub.
 ````
 
-Selamat datang di **dariKami V2!** 🎉
+Selamat datang di **viaQris\!** 🎉
 
-Versi 2 ini mengubah **dariKami** dari sekadar halaman donasi statis menjadi platform dukungan **headless** yang dinamis. Semua data transaksi dukungan kini disimpan dan dikelola langsung dari **repositori GitHub pribadi Anda**, memberikan Anda kontrol penuh atas data tanpa perlu database.
+**viaQris** adalah platform dukungan kreator yang membuat apresiasi jadi **mudah, cepat, dan fleksibel**. Siapa pun bisa mengirim dukungan instan ke kreator favoritnya melalui **QRIS**, yang kompatibel dengan **semua e-wallet dan bank**, tanpa ribet.
 
-Dengan dariKami V2, setiap dukungan yang masuk akan otomatis tercatat di file `public/data/darikami.json` pada repo GitHub Anda, yang kemudian bisa Anda tampilkan di halaman dashboard.
+Dengan viaQris, setiap dukungan terasa personal—seolah berkata:
 
-> *"Ini dari kami, untukmu. Teruslah berkarya!"*
-
------
-
-## 🤔 Bagaimana Cara Kerjanya? (Arsitektur V2)
-
-Sistem V2 bekerja dengan memisahkan antara tampilan, logika, dan data:
-
-1.  **Frontend (Halaman Dukungan & Dashboard):** Dibuat dengan Next.js, berjalan di Vercel. Ini adalah bagian yang dilihat oleh pengguna.
-2.  **Backend (API):** Sebuah API route di Next.js yang berfungsi sebagai perantara aman antara frontend dan GitHub.
-3.  **Database (GitHub Repository):** Sebuah repositori GitHub **pribadi** milik Anda digunakan sebagai tempat penyimpanan file `data.json` yang berisi semua catatan transaksi.
+> *"Ini dari kami, untukmu. Teruslah berkarya\!"*
 
 -----
 
-## ✨ Fitur Utama V2
+## ✨ Fitur Utama
 
-  * ✅ **Penyimpanan Data di GitHub** – Gunakan repo GitHub pribadi sebagai database gratis dan aman.
-  * ✅ **Dashboard Transaksi** – Pantau dan ubah status semua dukungan yang masuk melalui halaman dashboard.
   * ✅ **Gratis & Open Source** – Tanpa biaya platform, tanpa potongan tersembunyi.
   * 💳 **Dukungan Instan via QRIS Dinamis** – QR code unik dibuat untuk setiap nominal transaksi.
+  * 📂 **Penyimpanan Data di GitHub** – Gunakan repositori GitHub pribadi Anda sebagai database gratis dan aman.
+  * 📊 **Dashboard Transaksi** – Pantau dan kelola semua dukungan yang masuk melalui halaman dashboard.
   * 📱 **Desain Responsif** – Tampilan optimal di desktop & mobile.
   * 📄 **Invoice Dukungan** – Bukti pembayaran bisa diunduh dengan tampilan rapi.
   * ⏳ **Timer Pembayaran** – Mengingatkan penyelesaian transaksi dalam 5 menit.
@@ -55,40 +46,36 @@ Sistem V2 bekerja dengan memisahkan antara tampilan, logika, dan data:
 
 ## 🛠️ Panduan Instalasi & Deployment
 
-Proses instalasi V2 sedikit lebih detail karena membutuhkan koneksi ke GitHub. Ikuti langkah-langkah ini dengan saksama.
+Proses instalasi ini membutuhkan koneksi ke GitHub untuk berfungsi sebagai database.
 
-### Bagian 1: Persiapan Repositori Data di GitHub
+### Bagian 1: Persiapan Repositori Data
 
-Anda memerlukan **repositori kedua** yang bersifat **pribadi (private)** untuk menyimpan data transaksi.
+Anda memerlukan repositori **pribadi (private)** terpisah di GitHub untuk menyimpan data transaksi.
 
-1.  Buat repositori baru di GitHub dan atur visibilitasnya ke **Private**. Beri nama bebas, contoh: `data-dukungan`.
-2.  Di dalam repositori baru tersebut, buat struktur folder dan file berikut: `public/data/darikami.json`.
-3.  Isi file `data.json` dengan objek JSON kosong sebagai permulaan:
+1.  Buat repositori baru di GitHub, atur ke **Private**. Contoh nama: `data-viaqris`.
+2.  Di dalam repo baru tersebut, buat file di lokasi `public/data.json` dengan isi awal:
     ```json
     {}
     ```
 
 ### Bagian 2: Cara Membuat GitHub Token
 
-API kita butuh "kunci" untuk bisa mengakses dan mengubah file di repositori pribadi Anda. Kunci ini disebut Personal Access Token.
+API membutuhkan token untuk mengakses repositori data Anda.
 
-1.  Buka **Settings** di akun GitHub Anda (klik foto profil Anda di pojok kanan atas).
-2.  Di menu kiri bawah, klik **Developer settings**.
-3.  Pilih **Personal access tokens** -\> **Tokens (classic)**.
-4.  Klik tombol **Generate new token** -\> **Generate new token (classic)**.
-5.  **Note:** Beri nama token yang deskriptif, contoh: `dariKami API Token`.
-6.  **Expiration:** Pilih durasi masa aktif token (misalnya, 90 hari atau `No expiration` untuk kemudahan).
-7.  **Select scopes:** Centang kotak di sebelah **`repo`**. Ini memberikan izin penuh untuk mengakses repositori Anda.
-8.  Klik **Generate token**.
-9.  **SEGERA SALIN TOKEN ANDA\!** Simpan di tempat yang aman. Anda tidak akan bisa melihatnya lagi setelah meninggalkan halaman ini.
+1.  Buka **Settings** di akun GitHub Anda → **Developer settings**.
+2.  Pilih **Personal access tokens** → **Tokens (classic)**.
+3.  Klik **Generate new token (classic)**.
+4.  Beri nama token (misal: `viaQris API Token`), atur masa berlakunya.
+5.  Pada bagian **Select scopes**, centang kotak di sebelah **`repo`**.
+6.  Klik **Generate token** dan **segera salin tokennya**.
 
-### Bagian 3: Instalasi Lokal (Untuk Development)
+### Bagian 3: Instalasi Lokal
 
-1.  **Clone Repository `dariKami`**
+1.  **Clone Repository `viaQris`**
 
     ```sh
-    git clone [https://github.com/awusahrul/dariKami.git](https://github.com/awusahrul/dariKami.git)
-    cd dariKami
+    git clone [https://github.com/awusahrul/viaQris.git](https://github.com/awusahrul/viaQris.git)
+    cd viaQris
     ```
 
 2.  **Instal Dependensi**
@@ -98,15 +85,15 @@ API kita butuh "kunci" untuk bisa mengakses dan mengubah file di repositori prib
     ```
 
 3.  **Konfigurasi Environment `.env.local`**
-    Buat file `.env.local` di direktori utama `dariKami` dan isi dengan semua variabel berikut:
+    Buat file `.env.local` di direktori utama `viaQris` dan isi dengan semua variabel berikut:
 
     ```env
     # Ganti dengan informasi Anda
     GITHUB_TOKEN="ghp_TOKENYANGANDASALINTADI"
     REPO_OWNER="username-github-anda"
-    REPO_NAME="nama-repo-data-pribadi-anda" # Contoh: data-dukungan
+    REPO_NAME="nama-repo-data-pribadi-anda" # Contoh: data-viaqris
     BRANCH="main"
-    JSON_FILE_PATH="public/data/darikami.json"
+    JSON_FILE_PATH="public/data.json"
 
     # Ganti dengan string QRIS statis Anda yang asli
     DATA_STATIS_QRIS="PASTE_STRING_QRIS_STATIS_ANDA_DI_SINI"
@@ -120,14 +107,12 @@ API kita butuh "kunci" untuk bisa mengakses dan mengubah file di repositori prib
 
     Buka [http://localhost:3000/dukungan](https://www.google.com/search?q=http://localhost:3000/dukungan) di browser Anda.
 
-### Bagian 4: Deployment ke Vercel (Rekomendasi)
+### Bagian 4: Deployment ke Vercel
 
-1.  Daftar atau login ke [Vercel](https://vercel.com) menggunakan akun GitHub Anda.
-2.  Dari dashboard Vercel, klik **Add New...** -\> **Project**.
-3.  Pilih repositori `dariKami` Anda dan klik **Import**.
-4.  Buka bagian **Environment Variables**.
-5.  Masukkan **semua variabel** yang ada di file `.env.local` Anda satu per satu (`GITHUB_TOKEN`, `REPO_OWNER`, `REPO_NAME`, dll.). Pastikan nilainya benar.
-6.  Klik **Deploy**. Tunggu beberapa saat, dan aplikasi Anda akan online\!
+1.  Login ke [Vercel](https://vercel.com) dan impor repositori `viaQris` Anda.
+2.  Buka **Project Settings** → **Environment Variables**.
+3.  Masukkan **semua variabel** yang ada di file `.env.local` Anda satu per satu.
+4.  Klik **Deploy**.
 
 -----
 
@@ -138,13 +123,18 @@ API kita butuh "kunci" untuk bisa mengakses dan mengubah file di repositori prib
   - [x] Dashboard Transaksi Interaktif.
   - [ ] Notifikasi dukungan real-time (misalnya via Telegram Bot).
   - [ ] Pilihan kustomisasi tema & tampilan dari halaman dashboard.
-  - [ ] Analitik sederhana di halaman dashboard.
 
 -----
 
 ## 🤝 Kontribusi
 
 Kontribusi Anda sangat diterima\! Silakan fork repositori ini dan buka *pull request* untuk ide-ide baru.
+
+1.  Fork repositori ini.
+2.  Buat branch baru: `git checkout -b fitur/FiturBaru`.
+3.  Commit perubahan: `git commit -m 'Tambah FiturBaru'`.
+4.  Push branch: `git push origin fitur/FiturBaru`.
+5.  Buka Pull Request.
 
 -----
 
@@ -154,7 +144,7 @@ Dirilis di bawah **MIT License**. Lihat file `LICENSE` untuk detail.
 
 -----
 
-© 2025 **dariKami** | Dibuat oleh [@awusahrul](https://github.com/awusahrul)
+© 2025 **viaQris** | Dibuat oleh [@awusahrul](https://github.com/awusahrul)
 
 ```
 ```
