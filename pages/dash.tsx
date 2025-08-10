@@ -75,7 +75,7 @@ const HalamanDasbor: NextPage = () => {
     aturModalDetailTerbuka(false);
 
     try {
-        const respons = await fetch('/api/qris', {
+        const respons = await fetch('/api/v2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ aksi: 'updateStatus', kunciEntri: idTransaksi, statusBaru: statusBaru })
