@@ -166,13 +166,13 @@ const HalamanDasbor: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Dashboard Transaksi - Sahrul</title>
+        <title>Dashboard Transaksi - LapakSulawesi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="wadah-dashboard">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px'}}>
             <h1>Dashboard Transaksi</h1>
-            <Link href="/dukungan" style={{ textDecoration: 'none', color: 'var(--warna-utama)'}}>
+            <Link href="/" style={{ textDecoration: 'none', color: 'var(--warna-utama)'}}>
               ← Kembali ke Halaman Dukungan
             </Link>
         </div>
