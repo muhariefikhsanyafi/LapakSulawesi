@@ -168,6 +168,7 @@ const HalamanDasbor: NextPage = () => {
       <Head>
         <title>Dashboard Transaksi - LapakSulawesi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/logo.png" />
       </Head>
       <div className="wadah-dashboard">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px'}}>
