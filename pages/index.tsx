@@ -274,7 +274,7 @@ const HalamanDukungan: NextPage = () => {
               </form>
           </div>
         </div>
-        <footer className="kaki-utama">Made with ❤️ from @awusahrul, Edited by @maiy_id</footer>
+        <footer className="kaki-utama">Made with ❤️ from @awusahrul & Edited by @maiy_id</footer>
       </div>
       {apakahModalQrisTerbuka && dukunganAktif && (
         <div className={`modal ${apakahModalQrisTerbuka ? 'aktif' : ''}`} onClick={() => aturApakahModalQrisTerbuka(false)}>
