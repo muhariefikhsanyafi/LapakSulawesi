@@ -232,13 +232,13 @@ const HalamanDukungan: NextPage = () => {
       <Head>
         <title>Halaman Dukungan - LapakSulawesi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/jpeg" href="/gambar.jpg" />
+        <link rel="icon" type="image/png" href="/logo.png" />
       </Head>
       <div className="wadah">
         <div className="konten-utama">
           <div className="kepala">
               <button className="tombol-kepala" onClick={() => aturApakahModalRiwayatTerbuka(true)}>Riwayat</button>
-              <img src="/gambar.jpg" alt="Profile" className="gambar-profil"/>
+              <img src="/logo.png" alt="Profile" className="gambar-profil"/>
               <div className="nama-merek">LapakSulawesi</div>
           </div>
           <div className="wadah-formulir">
