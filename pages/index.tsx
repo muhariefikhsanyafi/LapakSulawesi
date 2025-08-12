@@ -248,7 +248,7 @@ const HalamanDukungan: NextPage = () => {
                       <div className="dropdown">
                           <button type="button" className="pemantik-turun" onClick={() => aturApakahDropdownTerbuka(!apakahDropdownTerbuka)}>
                               <span id="teks-pemantik-jumlah">Pilih Nominal</span>
-                              <span>▼</span>
+                              <span>💵</span>
                           </button>
                           <div className={`menu-turun ${apakahDropdownTerbuka ? 'tampil' : ''}`}>
                               {[1000, 5000, 10000, 25000, 50000].map(jumlah => (
