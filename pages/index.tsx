@@ -92,9 +92,9 @@ const HalamanDukungan: NextPage = () => {
 
     const tanggalSekarang = new Date();
     const dataUntukApi = {
-      kunciEntri: `dukungan-${tanggalSekarang.getTime()}`,
+      kunciEntri: `ls-${tanggalSekarang.getTime()}`,
       dataBaru: {
-        penjual: "Sahrul",
+        penjual: "LapakSulawesi",
         jenis: "jasa" as const,
         tanggal: tanggalSekarang.toISOString(),
         nama: nama,
@@ -203,7 +203,7 @@ const HalamanDukungan: NextPage = () => {
     if (!dataDukungan) return null;
     return (
       <div id="wadah-invoice">
-        <div className="kepala-invoice"><h2>INVOICE PEMBAYARAN</h2><p>Untuk: <strong>Sahrul</strong></p></div>
+        <div className="kepala-invoice"><h2>INVOICE PEMBAYARAN</h2><p>Untuk: <strong>LapakSulawesi</strong></p></div>
         <div className="detail-invoice">
           <table><tbody>
             <tr><td>No. Invoice:</td><td>{dataDukungan.idFaktur}</td></tr>
