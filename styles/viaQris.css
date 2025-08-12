@@ -193,7 +193,7 @@ body {
     transition: background-color 0.2s ease;
 }
 .tombol-dukung:hover {
-    background: #e4910a;
+    background: #a9141a;
 }
 .tombol-dukung:disabled {
     background: #ccc;
